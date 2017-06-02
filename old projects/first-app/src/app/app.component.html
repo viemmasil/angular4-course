@@ -1,0 +1,12 @@
+<h1>
+  {{title}}
+</h1>
+<hr>
+<fa-lifecycle *ngIf="!delete" [bindable]="boundValue">
+  <p>{{test}}</p>
+</fa-lifecycle>
+<button (click)="delete = true">Click to delete</button>
+<button (click)="delete = false">Click to restore</button>
+<hr>
+<button (click)="test = 'Changed content'">Click to change content</button>
+<button (click)="boundValue = boundValue + 500">Click to add value</button>
